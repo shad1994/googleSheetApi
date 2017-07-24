@@ -46,17 +46,33 @@
 			<groupId>com.google.http-client</groupId>
 			<artifactId>google-http-client</artifactId>
 			<version>1.19.0</version>
-
 		</dependency>
-<dependency>
-    <groupId>com.google.gdata</groupId>
-    <artifactId>core</artifactId>
-    <version>1.47.1</version>
-</dependency>
+
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>2.53.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-firefox-driver</artifactId>
+			<version>3.4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gdata</groupId>
+			<artifactId>core</artifactId>
+			<version>1.47.1</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.apache.oltu.oauth2</groupId>
 			<artifactId>org.apache.oltu.oauth2.client</artifactId>
 			<version>0.31</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>21.0</version>
 		</dependency>
 	</dependencies>
 </project>

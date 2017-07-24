@@ -12,9 +12,10 @@ import java.net.URL;
 
 public class requests {
 
+	
 	// HTTP GET request
 	public String sendGet(String url) throws Exception {
-		String newurl=url+"?access_token=ya29.GluOBCTE9FLrudNVUqrHaxHwHpDD2nH2SvgIX4rUOytSrCBQYgDODdFdDZur5VhU92eygnnxWiivMLBbA0jgBq2z9xgGL16TvEhkyxtuslTJbYBouKbqLS-Hw28Q";
+		String newurl=url+"?access_token=ya29.GluSBE_bSQj8ow8KuKg71oW4JcU0jobPWNaX0BAB37Aixq_YfsjJZ_tGHsFqwiAy9QesdaVOaW3QOE3OBRPlmPPHwxQC1rl1m2iFeE17qzwHtGxLpmINi_hHn5Te";
 		URL obj = new URL(newurl);
 		HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 
@@ -51,8 +52,9 @@ public class requests {
 
 	public String sendPost(String url, String param) throws Exception{
 		
-		
-	String newurl=url+"?access_token=ya29.GluOBCTE9FLrudNVUqrHaxHwHpDD2nH2SvgIX4rUOytSrCBQYgDODdFdDZur5VhU92eygnnxWiivMLBbA0jgBq2z9xgGL16TvEhkyxtuslTJbYBouKbqLS-Hw28Q";
+	try
+	{
+	String newurl=url+"?valueInputOption=USER_ENTERED&access_token=ya29.GluSBE_bSQj8ow8KuKg71oW4JcU0jobPWNaX0BAB37Aixq_YfsjJZ_tGHsFqwiAy9QesdaVOaW3QOE3OBRPlmPPHwxQC1rl1m2iFeE17qzwHtGxLpmINi_hHn5Te";
 
 		URL obj = new URL(newurl);
 		HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -62,6 +64,8 @@ public class requests {
 
 		// Send post request
 		con.setDoOutput(true);
+		//con.setFixedLengthStreamingMode(0);
+		con.setRequestProperty("Content-Type", "application/json");
 	
 		if (param == null) {
 
@@ -87,13 +91,17 @@ public class requests {
 		in.close();
 
 		return response.toString();
-		
-	
+	}
+	catch(Exception ex)
+	{
+		ex.printStackTrace();
+	}
+	return null;
 		
 	}
 
 	public String putrequest(String url, String data) throws IOException {
-		String newurl=url+"?access_token=ya29.GluOBCTE9FLrudNVUqrHaxHwHpDD2nH2SvgIX4rUOytSrCBQYgDODdFdDZur5VhU92eygnnxWiivMLBbA0jgBq2z9xgGL16TvEhkyxtuslTJbYBouKbqLS-Hw28Q";
+		String newurl=url+"?valueInputOption=USER_ENTERED&access_token=ya29.GluSBE_bSQj8ow8KuKg71oW4JcU0jobPWNaX0BAB37Aixq_YfsjJZ_tGHsFqwiAy9QesdaVOaW3QOE3OBRPlmPPHwxQC1rl1m2iFeE17qzwHtGxLpmINi_hHn5Te";
 		URL url1 = new URL(newurl);
 		HttpURLConnection httpCon = (HttpURLConnection) url1.openConnection();
 		httpCon.setDoOutput(true);
